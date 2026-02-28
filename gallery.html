@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Nateete Preparatory School</title>
+    <meta name="description"
+        content="View our vibrant school life, classroom activities, sports, and graduation ceremonies at Nateete Preparatory School.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@300;500;700;800&display=swap"
+        rel="stylesheet">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3rem;
+        }
+
+        .gallery-item {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            background: white;
+            position: relative;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+
+        .gallery-caption {
+            padding: 1rem;
+            text-align: center;
+            font-weight: 500;
+            color: var(--clr-primary);
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .gallery-filter {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--clr-primary);
+            background: transparent;
+            color: var(--clr-primary);
+            border-radius: 50px;
+            cursor: pointer;
+            font-family: var(--font-heading);
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background: var(--clr-primary);
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Professional Navbar (Sticky Header) -->
+    <header class="header">
+        <div class="top-bar">
+            <div class="container top-bar-inner">
+                <div class="contact-info">
+                    <span>📞 +256 (0) 000 000 000</span>
+                    <span>📧 info@nateeteprep.edu.ug</span>
+                </div>
+                <div class="quick-links">
+                    <a href="contact.html">Contact Us</a>
+                    <a href="admissions.html" class="apply-btn">Apply Now</a>
+                </div>
+            </div>
+        </div>
+        <nav class="navbar" id="navbar">
+            <div class="container nav-container">
+                <a href="index.html" class="brand">
+                    <div class="logo-icon">NP</div>
+                    <div class="brand-text">
+                        <span class="brand-title">Nateete Preparatory</span>
+                        <span class="brand-subtitle">School</span>
+                    </div>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html" class="active">Gallery</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header" id="gallery-header">
+            <div class="page-header-overlay"></div>
+            <div class="container page-header-content text-center">
+                <h1 class="page-title">Life at Nateete Prep</h1>
+                <p class="page-desc">Explore moments from our vibrant school community.</p>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section class="section bg-light">
+            <div class="container">
+
+                <div class="gallery-filter" data-scroll>
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Classroom Activities</button>
+                    <button class="filter-btn">Sports & Co-curricular</button>
+                    <button class="filter-btn">Events & Graduation</button>
+                </div>
+
+                <div class="gallery-grid">
+                    <!-- Image 1 -->
+                    <div class="gallery-item" data-scroll>
+                        <img src="https://www.hrw.org/sites/default/files/styles/embed_xxl/public/media_2024/05/202406africa_uganda_Kampala_KitanteNurserySchool.jpg?itok=9UGDIoSR"
+                            alt="Classroom Activities">
+                        <div class="gallery-caption">Interactive Classroom Learning</div>
+                    </div>
+
+                    <!-- Image 2 -->
+                    <div class="gallery-item" data-scroll>
+                        <img src="https://www.greenhillacademy.ac.ug/images/Buwaate/DSC_0313.jpg" alt="Academics Focus">
+                        <div class="gallery-caption">Dedicated Academic Focus</div>
+                    </div>
+
+                    <!-- Image 3 -->
+                    <div class="gallery-item" data-scroll>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/b/ba/Ugandan_Children_during_traditional_dance.jpg"
+                            alt="Traditional Dance">
+                        <div class="gallery-caption">Cultural Events & Dance</div>
+                    </div>
+
+                    <!-- Image 4 -->
+                    <div class="gallery-item" data-scroll>
+                        <img src="https://cdn2.kennedy-center.org/images/slideshow/COUTL2012_3300.jpg"
+                            alt="Graduation or Events">
+                        <div class="gallery-caption">School Celebrations</div>
+                    </div>
+
+                    <!-- Placeholder 5 -->
+                    <div class="gallery-item" data-scroll>
+                        <div
+                            style="width: 100%; height: 250px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: var(--clr-text-light);">
+                            Sports Day</div>
+                        <div class="gallery-caption">Annual Sports Athletics</div>
+                    </div>
+
+                    <!-- Placeholder 6 -->
+                    <div class="gallery-item" data-scroll>
+                        <div
+                            style="width: 100%; height: 250px; background: #e2e8f0; display: flex; align-items: center; justify-content: center; color: var(--clr-text-light);">
+                            Science Fair</div>
+                        <div class="gallery-caption">Science Fair Innovation</div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Professional Footer -->
+    <footer class="footer">
+        <div class="container footer-top">
+            <div class="footer-col brand-col">
+                <a href="index.html" class="footer-brand">
+                    <div class="logo-icon small">NP</div>
+                    <span class="brand-title text-white">Nateete Preparatory</span>
+                </a>
+                <p class="footer-desc">Empowering the future leaders of tomorrow through holistic and foundational
+                    education in the heart of Kampala.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">Fb</a>
+                    <a href="#" aria-label="Twitter">Tw</a>
+                    <a href="#" aria-label="Instagram">Ig</a>
+                </div>
+            </div>
+
+            <div class="footer-col links-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html">Admissions</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col contact-col">
+                <h3>Get In Touch</h3>
+                <ul class="contact-list">
+                    <li>📍 Nateete, Lubaga Division<br>Kampala, Uganda</li>
+                    <li>📞 +256 (0) 000 000 000</li>
+                    <li>📧 info@nateeteprep.edu.ug</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container text-center">
+                <p>&copy; <span id="year">2026</span> Nateete Preparatory School. Designed with Excellence. All Rights
+                    Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
